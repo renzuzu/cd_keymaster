@@ -84,6 +84,7 @@ function showKeymaster(){
     return promise;
 }
 function startGame(){
+	mistake = 0
     showKeymaster().then(()=>{
         moveKey();
         drawKeys();
@@ -105,9 +106,7 @@ function generateKeys(keylist){
 function endGame(status, message){
     clearInterval(game);
     settings.speed = settings.baseSpeed;
-    
     mistake = 0;
-    
     if(status)
         gameSuccess = true;
     else gameSuccess = false;
@@ -130,16 +129,16 @@ async function nextKey(i){
         i = 0;
     $("#keymaster-point-char").html(keys[i].key);
     keys[i].shown = true;
-    $(`[data-kid='${i}']`).css("right", "-128px").css("background-color", "#eee").show(200);
+    $(`[data-kid='${i}']`).css("right", "-128px").css("background-color", "rgba(0,0,0,0.5)").show(200);
     keys[i].right = -128;
 }
 async function evalStatus(){
     if(score >= settings.scoreWin){
-        endGame(true, "Win");
+        endGame(true, "Success");
         return;
     } 
     if(score <= settings.scoreLose){
-        endGame(false, "You went into the negative!");
+        endGame(false, "You Fail!");
         return;
     } 
     if(mistake > settings.maxMistake){

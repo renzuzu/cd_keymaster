@@ -47,7 +47,7 @@ RegisterNUICallback('fail', function()
     NUI_status = false
 end)
 
---[[RegisterCommand('keymaster', function() --TEST COMMAND
+RegisterCommand('keymaster', function() --TEST COMMAND
 	local CustomSettings = {
         settings = {
             handleEnd = true;  --Send a result message if true and callback when message closed or callback immediately without showing the message
@@ -58,7 +58,7 @@ end)
             maxMistake = 5; --How many missed keys can there be before losing
             speedIncrement = 1; --How much should the speed increase when a key hit was successful
         },
-        --keys = {"a", "w", "d", "s", "g"}; --You can keep this hashed out if you want to use default keys in the java side.
+        keys = {"a", "w", "d", "s", "g"}; --You can keep this hashed out if you want to use default keys in the java side.
     }
     StartKeyMaster(CustomSettings)
-end)]]
+end)
