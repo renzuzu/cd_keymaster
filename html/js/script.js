@@ -95,10 +95,11 @@ function generateKeys(keylist){
     if(keylist.length > 0){
         keys = [];
         for(let i = 0; i < keylist.length; i++){
+			r = Math.floor(Math.random()*keylist.length),
             keys.push({
-                key:keylist[i],
+                key:keylist[r],
                 right:-128,
-                shown:((i===0)?true:false)
+                shown:((r===0)?true:false)
             })
         }
     }

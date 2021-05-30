@@ -13,7 +13,7 @@ html, body{
     position:relative;
 }
 #keymaster-keycontainer{
-    background-image:linear-gradient(90deg, transparent, rgba(0,0,0,0.6));
+    background-image:linear-gradient(90deg, transparent, rgba(7, 26, 43, 0.99));
 }
 #keymaster-field{
     display:none;
@@ -32,10 +32,10 @@ html, body{
 
     text-transform: uppercase;
     border-radius: .5rem;
-    border:5px solid #333;
+    border:5px solid rgba(230, 230, 230, 0.801);
     width:128px;
     height:128px;
-    background-color:rgb(0,0,0,0.5);
+    background-color:rgba(7, 26, 43, 0.89);
 
     margin-left:20%;
     z-index:9999!important;
@@ -44,13 +44,13 @@ html, body{
     font-size:4rem;
     mix-blend-mode: exclusion;
     color:lime;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(7, 26, 43, 0.89);
     padding:1rem;
     border-top-left-radius:.825rem;
     border-top-right-radius: .825rem;
 }
 #keymaster-timer{
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(7, 26, 43, 0.89);
     padding:1rem;
     border-bottom-left-radius:.825rem;
     border-bottom-right-radius: .825rem;
@@ -68,7 +68,7 @@ html, body{
     align-items: center;
 
     z-index:1!important; 
-    background: rgb(0,0,0,0.5);
+    background: rgba(7, 26, 43, 0.89);;
     border-radius: .5rem;
     border-top: 1px solid rgba(0, 0, 0, 0.8);
     box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333;
@@ -105,7 +105,7 @@ html, body{
 } */
 #keymaster-countdown{
     position:absolute;
-    top:51%;
+    top:31%;
     left:51%;
     transform:translate(-51%, -51%);
 
